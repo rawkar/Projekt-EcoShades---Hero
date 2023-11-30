@@ -97,14 +97,35 @@ a {
 
 /* LAYOUT */
 
+body {
+  color: var(--color-light);
+}
+
+/* Overlay */
+
+.hero__overlay {
+  background: rgba(0, 0, 0, 0.4);
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .site-header {
-  background-color: #323431;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
   width: 100%;
   padding: 0 4rem;
+  position: fixed;
+  z-index: 99;
+}
+
+.branding {
+  max-width: 9rem;
 }
 
 .menu__list {
@@ -114,9 +135,215 @@ a {
 }
 .menu__item a {
   color: var(--color-light);
+  font-weight: 300;
+  font-size: --font-size-1;
+  font-family: var(--font-sans);
+  position: relative;
 }
+
+.menu__item a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-orange);
+  bottom: -4px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu__item a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* Header Icons */
 
 .site-header__icons {
   display: flex;
-  gap: 60px;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero {
+  background: url(/assets/images/bg_2.jpg);
+  background-position: 0% 20%;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+}
+
+.hero__main {
+  display: flex;
+  padding-top: 50px;
+
+  max-width: 80rem;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+.hero__content {
+  max-width: 42rem;
+  margin-top: 8rem;
+}
+
+.hero__title {
+  font-size: 70px;
+  margin: 0;
+  line-height: 1;
+}
+
+.hero__desc {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+/* Socials */
+
+.social__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.social__item {
+  list-style: none;
+}
+
+.social__item:hover svg path {
+  fill: #f39d2e;
+}
+
+/* Swiper */
+.hero__bottom {
+  padding-bottom: 50px;
+}
+.hero__bottom-inner {
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+}
+
+.hero__bottom-socials {
+  margin-left: 2rem;
+}
+
+.hero__bottom-swiper {
+  position: relative;
+
+  --swiper-navigation-sides-offset: -30px;
+  --swiper-navigation-size: 22px;
+}
+
+.swiper {
+  max-width: 80rem;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide img {
+  background-color: rgba(217, 217, 217, 0.11);
+  padding: 6rem 3rem;
+  border-radius: 22px;
+  margin: 1rem;
+  backdrop-filter: blur(30px);
+  position: relative;
+}
+
+.product__title,
+.product__price,
+.product__button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.product__title {
+  left: 50%;
+  top: 1rem;
+  z-index: 99;
+  color: var(--color-light);
+}
+
+.product__price {
+  left: 50%;
+  bottom: 3.6rem;
+  z-index: 99;
+  color: var(--color-light);
+  font-family: "bilo";
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.product__button {
+  left: 50%;
+  bottom: 1.2rem;
+  z-index: 99;
+  background-color: var(--color-blue);
+  border: none;
+  color: var(--color-light);
+  border-radius: 20px;
+  font-family: "bilo";
+  font-weight: 600;
+  font-size: 16px;
+  padding: 0.5rem 1.5rem;
+}
+
+.product__button:hover {
+  background-color: var(--color-orange);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff !important;
+  margin: -0.6rem;
+}
+
+/* Pagination */
+
+.swiper-pagination {
+  margin-bottom: -1.8rem;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--color-light) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-blue) !important;
+}
+
+.swiper-pagination-bullet {
+  width: 2rem !important;
+  height: 0.2rem !important;
+  border-radius: 0 !important;
+}
+
+@media (max-width: 760px) {
+  .swiper-button-next {
+    right: 20px;
+    transform: rotate(90deg);
+  }
+
+  .swiper-button-prev {
+    left: 20px;
+    transform: rotate(90deg);
+  }
 }
