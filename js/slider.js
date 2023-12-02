@@ -1,44 +1,28 @@
-var swiper = new Swiper('.swiper', {
-    slidesPerView: 3,
-    direction: getDirection(),
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    '@0.75': {
+      slidesPerView: 1,
+      spaceBetween: 20,
     },
-    on: {
-      resize: function () {
-        swiper.changeDirection(getDirection());
-      },
+    '@1.00': {
+      slidesPerView: 2,
+      spaceBetween: 40,
     },
-
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-
-    //   breakpoints: {
-    //     // when window width is >= 320px
-    //     320: {
-    //       slidesPerView: 2,
-    //       spaceBetween: 20
-    //     },
-    //     // when window width is >= 480px
-    //     480: {
-    //       slidesPerView: 3,
-    //       spaceBetween: 30
-    //     },
-    //     // when window width is >= 640px
-    //     1240: {
-    //       slidesPerView: 2,
-    //       spaceBetween: 40
-    //     }
-    //   }
-    
-  });
-
-  function getDirection() {
-    var windowWidth = window.innerWidth;
-    var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
-
-    return direction;
+    '@1.90': {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
   }
+});
