@@ -113,6 +113,8 @@ body {
   right: 0;
 }
 
+/* SITE HEADER */
+
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -166,6 +168,15 @@ body {
   gap: 40px;
   align-items: center;
 }
+
+#menu-button {
+  display: none;
+  border: none;
+  background: none;
+  flex-shrink: 0;
+}
+
+/* HERO */
 
 .hero {
   background: url(/assets/images/bg_2.jpg);
@@ -362,4 +373,40 @@ body {
   width: 2rem !important;
   height: 0.2rem !important;
   border-radius: 0 !important;
+}
+
+/* 1200px or less */
+
+@media screen and (max-width: 1200px) {
+  .menu__list {
+    gap: 30px;
+  }
+}
+
+/* 900px or less */
+
+@media screen and (max-width: 900px) {
+  .menu__list {
+    display: none;
+  }
+
+  #menu-button {
+    display: block;
+    position: absolute;
+    right: 10%;
+  }
+
+  .site-header__icons {
+    position: absolute;
+
+    right: 25%;
+  }
+}
+
+/* 480px or less */
+
+@media screen and (max-width: 480px) {
+  .site-header__icons {
+    display: none;
+  }
 }
