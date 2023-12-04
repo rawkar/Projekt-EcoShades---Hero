@@ -255,7 +255,6 @@ body {
 }
 
 /* Swiper */
-
 .hero__bottom-swiper {
   position: relative;
   margin-left: 12rem;
@@ -301,6 +300,7 @@ body {
   background-color: rgba(217, 217, 217, 0.11);
   padding: 6rem 3rem;
   border-radius: 22px;
+  margin-bottom: 2rem;
 
   backdrop-filter: blur(30px);
 }
@@ -322,7 +322,7 @@ body {
 
 .product__price {
   left: 50%;
-  bottom: 3rem;
+  bottom: 5rem;
   z-index: 99;
   color: var(--color-light);
   font-family: "bilo";
@@ -332,7 +332,7 @@ body {
 
 .product__button {
   left: 50%;
-  bottom: 1.5rem;
+  bottom: 3rem;
   z-index: 99;
   background-color: var(--color-blue);
   border: none;
@@ -358,6 +358,7 @@ body {
 
 .swiper-pagination {
   margin-bottom: -1.8rem;
+
   z-index: 299;
 }
 
@@ -401,6 +402,43 @@ body {
 
     right: 25%;
   }
+
+  .hero__bottom-socials {
+    display: none;
+  }
+
+  .hero__bottom-inner {
+    padding: 0;
+  }
+
+  .hero__main,
+  .hero__bottom-swiper {
+    margin-right: 4rem;
+    margin-left: 4rem;
+  }
+}
+
+/* 760px or less */
+
+@media screen and (max-width: 760px) {
+  .hero__title {
+    font-size: var(--font-size-6);
+  }
+
+  .hero__desc {
+    font-size: var(--font-size-3);
+  }
+}
+
+/* 560PX OR LESS */
+@media screen and (max-width: 560px) {
+  .hero__title {
+    font-size: var(--font-size-5);
+  }
+
+  .hero__desc {
+    font-size: var(--font-size-2);
+  }
 }
 
 /* 480px or less */
@@ -408,5 +446,14 @@ body {
 @media screen and (max-width: 480px) {
   .site-header__icons {
     display: none;
+  }
+}
+
+/* 420px or less */
+
+@media screen and (max-width: 420px) {
+  .hero__bottom-swiper {
+    margin-right: 2rem;
+    margin-left: 2rem;
   }
 }
