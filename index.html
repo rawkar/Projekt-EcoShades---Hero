@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="https://use.typekit.net/hxc0oet.css" />
 
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-      defer
-    ></script>
+
+    <!-- JS CDN -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script src="js/slider.js" defer></script>
+
+    <!-- CSS CDN -->
 
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
 
     <title>EcoShades Hero</title>
@@ -151,15 +154,13 @@
             </ul>
           </div>
 
-          <!-- Hero Swiper -->
+          <!-- SWIPER -->
 
           <div class="hero__bottom-swiper">
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-
-            <div class="swiper mySwiper">
+            <div class="swiper-container mySwiper">
               <div class="swiper-wrapper">
-                <!-- Produkt 1 -->
                 <div class="swiper-slide">
                   <h4 class="product__title">EARTH VIEW</h4>
                   <p class="product__price">89 €</p>
@@ -212,9 +213,6 @@
                     <img src="/assets/images/produkt_2.png" alt="" />
                   </div>
                 </div>
-
-                <!-- Produkt 6 -->
-
                 <div class="swiper-slide">
                   <h4 class="product__title">THICK GROOVE</h4>
                   <p class="product__price">89 €</p>
@@ -224,11 +222,14 @@
                   </div>
                 </div>
               </div>
+
+              <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>
+
+      <!-- Hero Swiper -->
     </section>
   </body>
 </html>
