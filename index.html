@@ -14,6 +14,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script src="js/slider.js" defer></script>
+    <script src="js/menu.js" defer></script>
 
     <!-- CSS CDN -->
 
@@ -63,9 +64,25 @@
       <!-- Hidden hamburger menu button -->
 
       <button id="menu-button">
-        <img src="/assets/icon/Hamburger menu.svg" alt="" />
+        <div class="hamburger"></div>
+        <!-- <img src="/assets/icon/Hamburger menu.svg" alt="" /> -->
       </button>
     </header>
+
+    <nav class="full-menu">
+      <nav class="menu-resp">
+        <ul class="menu__list">
+          <li class="menu__item menu__item-current">
+            <a href="" class="menu__link">New arrivals</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">All products</a>
+          </li>
+          <li class="menu__item"><a href="" class="menu__link">Collabs</a></li>
+          <li class="menu__item"><a href="" class="menu__link">Contact</a></li>
+        </ul>
+      </nav>
+    </nav>
 
     <!-- HERO SECTION -->
 
