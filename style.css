@@ -477,29 +477,17 @@ body {
   }
 }
 
-/* 760px or less */
+/* 650px or less */
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 650px) {
   .hero__title {
     font-size: var(--font-size-6);
   }
 
   .hero__desc {
     font-size: var(--font-size-2);
+    margin-bottom: 4rem;
   }
-
-  /* .hero__bottom-socials {
-    display: block;
-
-    top: 110%;
-    margin: 0 auto;
-  }
-
-  .social__list {
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-  } */
 }
 
 /* 560PX OR LESS */
@@ -511,6 +499,24 @@ body {
   .hero__desc {
     font-size: var(--font-size-2);
   }
+
+  .hero__bottom-inner {
+  }
+
+  .hero__bottom-socials {
+    display: block;
+
+    top: 110%;
+    margin: 0 auto;
+
+    margin-left: 20%;
+  }
+
+  .social__list {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
 }
 
 /* 480px or less */
@@ -520,12 +526,11 @@ body {
     display: none;
   }
 
+  .hero__title {
+    font-size: var(--font-size-5);
+  }
+
   .hero__desc {
     font-size: var(--font-size-1);
   }
-}
-
-/* 420px or less */
-
-@media screen and (max-width: 420px) {
 }
